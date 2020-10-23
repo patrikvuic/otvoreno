@@ -12,6 +12,6 @@
     * Godina filma
     * Filmski Studio
     * Trajanje
-    * Jezik filma
+    * Zemlja porjekla
     * Žanr
     * Box office zarada (milijun $)
