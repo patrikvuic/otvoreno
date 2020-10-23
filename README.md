@@ -1,4 +1,4 @@
-#Skup podataka - filmovi
+# Skup podataka - filmovi
 * Ovo je lista nekih filmova kojih sam odabrado za izradu labosa. Svi podaci su uzeti sa wikipedije.
 * Otvorena licenca : Creative Commons Attribution-ShareAlike License
 * Autor : Patrik Vuić
