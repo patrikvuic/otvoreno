@@ -1,154 +1,22 @@
-[
-  {
-    "Naziv filma":"Genijalni um",
-    "Wikipedia":"https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film)",
-    "Redatelj":{"Ime":"Ron", "Prezime":"Howard"},
-    "Glumci":[
-      { "Ime":"Russell", "Prezime":"Crowe" },
-      { "Ime":"Jennifer", "Prezime":"Connelly" }
-    ],
-    "Godina":2001,
-    "Filmski studio" : "Universal Pictures",
-    "Trajanje (min)":135,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr": "Drama",
-    "Box-office zarada (m$)": 313
-  },
-  {
-    "Naziv filma":"Vuk s Wall Streeta",
-    "Wikipedia":"https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film)",
-    "Redatelj":{"Ime":"Martin", "Prezime":"Scorsese"},
-    "Glumci":[
-      { "Ime":"Leonardo", "Prezime":"DiCaprio" },
-      { "Ime":"Jonah", "Prezime":"Hill" },
-      { "Ime":"Margot", "Prezime":"Robbie" }
-    ],
-    "Godina":2013,
-    "Filmski studio" : "Universal Pictures",
-    "Trajanje (min)":179,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr":"Komedija",
-    "Box-office zarada (m$)": 392
-  },
-  {
-    "Naziv filma": "Nemilosrdni gadovi",
-    "Wikipedia":"https://en.wikipedia.org/wiki/Inglourious_Basterds",
-    "Redatelj":{"Ime":"Quentin", "Prezime":"Tarantino"},
-    "Glumci":[
-      { "Ime":"Brad", "Prezime":"Pitt" },
-      { "Ime":"Christoph", "Prezime":"Waltz" },
-      { "Ime":"Michael", "Prezime":"Fassbender" }
-    ],
-    "Godina":2009,
-    "Filmski studio" : "The Weinstein Company",
-    "Trajanje (min)":153,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr": "Ratni",
-    "Box-office zarada (m$)": 321
-  },
-  {
-    "Naziv filma":"Kum",
-    "Wikipedia":"https://en.wikipedia.org/wiki/The_Godfather",
-    "Redatelj":{"Ime":"Francis Ford", "Prezime":"Coppola"},
-    "Glumci":[
-      { "Ime":"Marlon", "Prezime":"Brando" },
-      { "Ime":"Al", "Prezime":"Pacino" }
-    ],
-    "Godina":1972,
-    "Filmski studio" : "Paramount Pictures",
-    "Trajanje (min)":177,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr":"Krimi",
-    "Box-office zarada (m$)": 260
-  },
-  {
-    "Naziv filma":"Sherlock Holmes",
-    "Wikipedia":"https://en.wikipedia.org/wiki/Sherlock_Holmes_(2009_film)",
-    "Redatelj":{"Ime":"Guy", "Prezime":"Ritchie"},
-    "Glumci":[
-      { "Ime":"Robert Jr.", "Prezime":"Downey" },
-      { "Ime":"Jude", "Prezime":"Law" }
-    ],
-    "Godina":2009,
-    "Filmski studio" : "Warner Bros. Pictures",
-    "Trajanje (min)":129,
-    "Zemlja":"Ujedinjeno Kraljevstvo",
-    "Zanr":"Akcija",
-    "Box-office zarada (m$)": 524
-  },
-  {
-    "Naziv filma":"Američki psiho",
-    "Wikipedia":"https://en.wikipedia.org/wiki/American_Psycho_(film)",
-    "Redatelj":{"Ime":"Mary", "Prezime":"Harron"},
-    "Glumci":[
-      { "Ime":"Christian", "Prezime":"Bale" },
-      { "Ime":"Willem", "Prezime":"Dafoe" }
-    ],
-    "Godina":2000,
-    "Filmski studio" : "Lions Gate Films",
-    "Trajanje (min)":101,
-    "Zemlja":"Kanada",
-    "Zanr": "Triler",
-    "Box-office zarada (m$)": 34
-  },
-  {
-    "Naziv filma":"Rambo",
-    "Wikipedia":"https://en.wikipedia.org/wiki/First_Blood",
-    "Redatelj":{"Ime":"Ted", "Prezime":"Kotcheff"},
-    "Glumci":[
-      { "Ime":"Sylvester", "Prezime":"Stallone" },
-      { "Ime":"Richard", "Prezime":"Crenna" }
-    ],
-    "Godina":1982,
-    "Filmski studio" : "Orion Pictures",
-    "Trajanje (min)":93,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr":"Akcija",
-    "Box-office zarada (m$)": 125
-  },
-  {
-    "Naziv filma":"Kad jaganjci utihnu",
-    "Wikipedia":"https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(film)",
-    "Redatelj":{"Ime":"Jonathan", "Prezime":"Demme"},
-    "Glumci":[
-      { "Ime":"Jodie", "Prezime":"Foster" },
-      { "Ime":"Anthony", "Prezime":"Hopkins" }
-    ],
-    "Godina":1991,
-    "Filmski studio" : "Orion Pictures",
-    "Trajanje (min)":118,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr":"Horor",
-    "Box-office zarada (m$)": 273
-  },
-  {
-    "Naziv filma":"Matrix",
-    "Wikipedia":"https://en.wikipedia.org/wiki/The_Matrix",
-    "Redatelj":{"Ime":"Lana", "Prezime":"Wachowski"},
-    "Glumci":[
-      { "Ime":"Keanu", "Prezime":"Reeves" },
-      { "Ime":"Laurence", "Prezime":"Fishburne" }
-    ],
-    "Godina":1999,
-    "Filmski studio" : "Warner Bros.",
-    "Trajanje (min)":136,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr":"Znanstvena-fantastika",
-    "Box-office zarada (m$)": 465
-  },
-  {
-    "Naziv filma":"Interstellar",
-    "Wikipedia":"https://en.wikipedia.org/wiki/Interstellar_(film)",
-    "Redatelj":{"Ime":"Christoper", "Prezime":"Nolan"},
-    "Glumci":[
-      { "Ime":"Matthew", "Prezime":"McConaughey" },
-      { "Ime":"Anne", "Prezime":"Hathaway" }
-    ],
-    "Godina":2014,
-    "Filmski studio" : "Paramount Pictures",
-    "Trajanje (min)":169,
-    "Zemlja":"Sjedinjene Američke Države",
-    "Zanr":"Znanstvena-fantastika",
-    "Box-office zarada (m$)": 696
-  }
-]
+[{"naziv_filma":"Genijalni um","wikipedia":"A_Beautiful_Mind_(film)","redatelj_ime":"Ron","redatelj_prezime":"Howard","glumac_ime":"Russell","glumac_prezime":"Crowe","godina":2001,"filmski_studio":"Universal Pictures","trajanje_min":135,"zemlja":"Sjedinjene Američke Države","zanr":"Drama","box_office_zarada (m$)":313},
+{"naziv_filma":"Genijalni um","wikipedia":"A_Beautiful_Mind_(film)","redatelj_ime":"Ron","redatelj_prezime":"Howard","glumac_ime":"Jennifer","glumac_prezime":"Connelly","godina":2001,"filmski_studio":"Universal Pictures","trajanje_min":135,"zemlja":"Sjedinjene Američke Države","zanr":"Drama","box_office_zarada (m$)":313},
+{"naziv_filma":"Vuk s Wall Streeta","wikipedia":"The_Wolf_of_Wall_Street_(2013_film)","redatelj_ime":"Martin","redatelj_prezime":"Scorsese","glumac_ime":"Leonardo","glumac_prezime":"DiCaprio","godina":2013,"filmski_studio":"Universal Pictures","trajanje_min":179,"zemlja":"Sjedinjene Američke Države","zanr":"Komedija","box_office_zarada (m$)":392},
+{"naziv_filma":"Vuk s Wall Streeta","wikipedia":"The_Wolf_of_Wall_Street_(2013_film)","redatelj_ime":"Martin","redatelj_prezime":"Scorsese","glumac_ime":"Jonah","glumac_prezime":"Hill","godina":2013,"filmski_studio":"Universal Pictures","trajanje_min":179,"zemlja":"Sjedinjene Američke Države","zanr":"Komedija","box_office_zarada (m$)":392},
+{"naziv_filma":"Vuk s Wall Streeta","wikipedia":"The_Wolf_of_Wall_Street_(2013_film)","redatelj_ime":"Martin","redatelj_prezime":"Scorsese","glumac_ime":"Margot","glumac_prezime":"Robbie","godina":2013,"filmski_studio":"Universal Pictures","trajanje_min":179,"zemlja":"Sjedinjene Američke Države","zanr":"Komedija","box_office_zarada (m$)":392},
+{"naziv_filma":"Nemilosrdni gadovi","wikipedia":"Inglourious_Basterds","redatelj_ime":"Quentin","redatelj_prezime":"Tarantino","glumac_ime":"Brad","glumac_prezime":"Pitt","godina":2009,"filmski_studio":"The Weinstein Company","trajanje_min":153,"zemlja":"Sjedinjene Američke Države","zanr":"Ratni","box_office_zarada (m$)":321},
+{"naziv_filma":"Nemilosrdni gadovi","wikipedia":"Inglourious_Basterds","redatelj_ime":"Quentin","redatelj_prezime":"Tarantino","glumac_ime":"Christoph","glumac_prezime":"Waltz","godina":2009,"filmski_studio":"The Weinstein Company","trajanje_min":153,"zemlja":"Sjedinjene Američke Države","zanr":"Ratni","box_office_zarada (m$)":321},
+{"naziv_filma":"Nemilosrdni gadovi","wikipedia":"Inglourious_Basterds","redatelj_ime":"Quentin","redatelj_prezime":"Tarantino","glumac_ime":"Michael","glumac_prezime":"Fassbender","godina":2009,"filmski_studio":"The Weinstein Company","trajanje_min":153,"zemlja":"Sjedinjene Američke Države","zanr":"Ratni","box_office_zarada (m$)":321},
+{"naziv_filma":"Kum","wikipedia":"The_Godfather","redatelj_ime":"Francis Ford","redatelj_prezime":"Coppola","glumac_ime":"Marlon","glumac_prezime":"Brando","godina":1972,"filmski_studio":"Paramount Pictures","trajanje_min":177,"zemlja":"Sjedinjene Američke Države","zanr":"Krimi","box_office_zarada (m$)":260},
+{"naziv_filma":"Kum","wikipedia":"The_Godfather","redatelj_ime":"Francis Ford","redatelj_prezime":"Coppola","glumac_ime":"Al","glumac_prezime":"Pacino","godina":1972,"filmski_studio":"Paramount Pictures","trajanje_min":177,"zemlja":"Sjedinjene Američke Države","zanr":"Krimi","box_office_zarada (m$)":260},
+{"naziv_filma":"Sherlock Holmes","wikipedia":"Sherlock_Holmes_(2009_film)","redatelj_ime":"Guy","redatelj_prezime":"Ritchie","glumac_ime":"Robert Jr.","glumac_prezime":"Downey","godina":2009,"filmski_studio":"Warner Bros. Pictures","trajanje_min":129,"zemlja":"Ujedinjeno Kraljevstvo","zanr":"Akcija","box_office_zarada (m$)":524},
+{"naziv_filma":"Sherlock Holmes","wikipedia":"Sherlock_Holmes_(2009_film)","redatelj_ime":"Guy","redatelj_prezime":"Ritchie","glumac_ime":"Jude","glumac_prezime":"Law","godina":2009,"filmski_studio":"Warner Bros. Pictures","trajanje_min":129,"zemlja":"Ujedinjeno Kraljevstvo","zanr":"Akcija","box_office_zarada (m$)":524},
+{"naziv_filma":"Američki psiho","wikipedia":"American_Psycho_(film)","redatelj_ime":"Mary","redatelj_prezime":"Harron","glumac_ime":"Christian","glumac_prezime":"Bale","godina":2000,"filmski_studio":"Lions Gate Films","trajanje_min":101,"zemlja":"Kanada","zanr":"Triler","box_office_zarada (m$)":34},
+{"naziv_filma":"Američki psiho","wikipedia":"American_Psycho_(film)","redatelj_ime":"Mary","redatelj_prezime":"Harron","glumac_ime":"Willem","glumac_prezime":"Dafoe","godina":2000,"filmski_studio":"Lions Gate Films","trajanje_min":101,"zemlja":"Kanada","zanr":"Triler","box_office_zarada (m$)":34},
+{"naziv_filma":"Rambo","wikipedia":"First_Blood","redatelj_ime":"Ted","redatelj_prezime":"Kotcheff","glumac_ime":"Sylvester","glumac_prezime":"Stallone","godina":1982,"filmski_studio":"Orion Pictures","trajanje_min":93,"zemlja":"Sjedinjene Američke Države","zanr":"Akcija","box_office_zarada (m$)":125},
+{"naziv_filma":"Rambo","wikipedia":"First_Blood","redatelj_ime":"Ted","redatelj_prezime":"Kotcheff","glumac_ime":"Richard","glumac_prezime":"Crenna","godina":1982,"filmski_studio":"Orion Pictures","trajanje_min":93,"zemlja":"Sjedinjene Američke Države","zanr":"Akcija","box_office_zarada (m$)":125},
+{"naziv_filma":"Kad jaganjci utihnu","wikipedia":"The_Silence_of_the_Lambs_(film)","redatelj_ime":"Jonathan","redatelj_prezime":"Demme","glumac_ime":"Jodie","glumac_prezime":"Foster","godina":1991,"filmski_studio":"Orion Pictures","trajanje_min":118,"zemlja":"Sjedinjene Američke Države","zanr":"Horor","box_office_zarada (m$)":273},
+{"naziv_filma":"Kad jaganjci utihnu","wikipedia":"The_Silence_of_the_Lambs_(film)","redatelj_ime":"Jonathan","redatelj_prezime":"Demme","glumac_ime":"Anthony","glumac_prezime":"Hopkins","godina":1991,"filmski_studio":"Orion Pictures","trajanje_min":118,"zemlja":"Sjedinjene Američke Države","zanr":"Horor","box_office_zarada (m$)":273},
+{"naziv_filma":"Matrix","wikipedia":"The_Matrix","redatelj_ime":"Lana","redatelj_prezime":"Wachowski","glumac_ime":"Keanu","glumac_prezime":"Reeves","godina":1999,"filmski_studio":"Warner Bros. Pictures","trajanje_min":136,"zemlja":"Sjedinjene Američke Države","zanr":"Znanstvena-fantastika","box_office_zarada (m$)":465},
+{"naziv_filma":"Matrix","wikipedia":"The_Matrix","redatelj_ime":"Lana","redatelj_prezime":"Wachowski","glumac_ime":"Laurence","glumac_prezime":"Fishburne","godina":1999,"filmski_studio":"Warner Bros. Pictures","trajanje_min":136,"zemlja":"Sjedinjene Američke Države","zanr":"Znanstvena-fantastika","box_office_zarada (m$)":465},
+{"naziv_filma":"Interstellar","wikipedia":"Interstellar_(film)","redatelj_ime":"Christoper","redatelj_prezime":"Nolan","glumac_ime":"Matthew","glumac_prezime":"McConaughey","godina":2014,"filmski_studio":"Paramount Pictures","trajanje_min":169,"zemlja":"Sjedinjene Američke Države","zanr":"Znanstvena-fantastika","box_office_zarada (m$)":696},
+{"naziv_filma":"Interstellar","wikipedia":"Interstellar_(film)","redatelj_ime":"Christoper","redatelj_prezime":"Nolan","glumac_ime":"Anne","glumac_prezime":"Hathaway","godina":2014,"filmski_studio":"Paramount Pictures","trajanje_min":169,"zemlja":"Sjedinjene Američke Države","zanr":"Znanstvena-fantastika","box_office_zarada (m$)":696}]

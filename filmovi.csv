@@ -1,23 +1,23 @@
-naziv_filma,wikipedia,redatelj_ime,redatelj_prezime,glumac_ime,glumac_prezime,godina,filmski_studio,trajanje_min,zemlja,zanr,Box_office_zarada (m$)
-Genijalni um,https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film),Ron,Howard,Russell,Crowe,2001,Universal Pictures,135,Sjedinjene Američke Države,Drama,313
-Genijalni um,https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film),Ron,Howard,Jennifer,Connelly,2001,Universal Pictures,135,Sjedinjene Američke Države,Drama,313
-Vuk s Wall Streeta,https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film),Martin,Scorsese,Leonardo,DiCaprio,2013,Universal Pictures,179,Sjedinjene Američke Države,Komedija,392
-Vuk s Wall Streeta,https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film),Martin,Scorsese,Jonah,Hill,2013,Universal Pictures,179,Sjedinjene Američke Države,Komedija,392
-Vuk s Wall Streeta,https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film),Martin,Scorsese,Margot,Robbie,2013,Universal Pictures,179,Sjedinjene Američke Države,Komedija,392
-Nemilosrdni gadovi,https://en.wikipedia.org/wiki/Inglourious_Basterds,Quentin,Tarantino,Brad,Pitt,2009,The Weinstein Company,153,Sjedinjene Američke Države,Ratni,321
-Nemilosrdni gadovi,https://en.wikipedia.org/wiki/Inglourious_Basterds,Quentin,Tarantino,Christoph,Waltz,2009,The Weinstein Company,153,Sjedinjene Američke Države,Ratni,321
-Nemilosrdni gadovi,https://en.wikipedia.org/wiki/Inglourious_Basterds,Quentin,Tarantino,Michael,Fassbender,2009,The Weinstein Company,153,Sjedinjene Američke Države,Ratni,321
-Kum,https://en.wikipedia.org/wiki/The_Godfather,Francis Ford,Coppola,Marlon,Brando,1972,Paramount Pictures,177,Sjedinjene Američke Države,Krimi,260
-Kum,https://en.wikipedia.org/wiki/The_Godfather,Francis Ford,Coppola,Al,Pacino,1972,Paramount Pictures,177,Sjedinjene Američke Države,Krimi,260
-Sherlock Holmes,https://en.wikipedia.org/wiki/Sherlock_Holmes_(2009_film),Guy,Ritchie,Robert Jr.,Downey,2009,Warner Bros. Pictures,129,Ujedinjeno Kraljevstvo,Akcija,524
-Sherlock Holmes,https://en.wikipedia.org/wiki/Sherlock_Holmes_(2009_film),Guy,Ritchie,Jude,Law,2009,Warner Bros. Pictures,129,Ujedinjeno Kraljevstvo,Akcija,524
-Američki psiho,https://en.wikipedia.org/wiki/American_Psycho_(film),Mary,Harron,Christian,Bale,2000,Lions Gate Films,101,Kanada,Triler,34
-Američki psiho,https://en.wikipedia.org/wiki/American_Psycho_(film),Mary,Harron,Willem,Dafoe,2000,Lions Gate Films,101,Kanada,Triler,34
-Rambo,https://en.wikipedia.org/wiki/First_Blood,Ted,Kotcheff,Sylvester,Stallone,1982,Orion Pictures,93,Sjedinjene Američke Države,Akcija,125
-Rambo,https://en.wikipedia.org/wiki/First_Blood,Ted,Kotcheff,Richard,Crenna,1982,Orion Pictures,93,Sjedinjene Američke Države,Akcija,125
-Kad jaganjci utihnu,https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(film),Jonathan,Demme,Jodie,Foster,1991,Orion Pictures,118,Sjedinjene Američke Države,Horor,273
-Kad jaganjci utihnu,https://en.wikipedia.org/wiki/The_Silence_of_the_Lambs_(film),Jonathan,Demme,Anthony,Hopkins,1991,Orion Pictures,118,Sjedinjene Američke Države,Horor,273
-Matrix,https://en.wikipedia.org/wiki/The_Matrix,Lana,Wachowski,Keanu,Reeves,1999,Warner Bros.,136,Sjedinjene Američke Države,Znanstvena-fantastika,465
-Matrix,https://en.wikipedia.org/wiki/The_Matrix,Lana,Wachowski,Laurence,Fishburne,1999,Warner Bros.,136,Sjedinjene Američke Države,Znanstvena-fantastika,465
-Interstellar,https://en.wikipedia.org/wiki/Interstellar_(film),Christoper,Nolan,Matthew,McConaughey,2014,Paramount Pictures,169,Sjedinjene Američke Države,Znanstvena-fantastika,696
-Interstellar,https://en.wikipedia.org/wiki/Interstellar_(film),Christoper,Nolan,Anne,Hathaway,2014,Paramount Pictures,169,Sjedinjene Američke Države,Znanstvena-fantastika,696
+naziv_filma,wikipedia,redatelj_ime,redatelj_prezime,glumac_ime,glumac_prezime,godina,filmski_studio,trajanje_min,zemlja,zanr,box_office_zarada_m$
+Genijalni um,A_Beautiful_Mind_(film),Ron,Howard,Russell,Crowe,2001,Universal Pictures,135,Sjedinjene Američke Države,Drama,313
+Genijalni um,A_Beautiful_Mind_(film),Ron,Howard,Jennifer,Connelly,2001,Universal Pictures,135,Sjedinjene Američke Države,Drama,313
+Vuk s Wall Streeta,The_Wolf_of_Wall_Street_(2013_film),Martin,Scorsese,Leonardo,DiCaprio,2013,Universal Pictures,179,Sjedinjene Američke Države,Komedija,392
+Vuk s Wall Streeta,The_Wolf_of_Wall_Street_(2013_film),Martin,Scorsese,Jonah,Hill,2013,Universal Pictures,179,Sjedinjene Američke Države,Komedija,392
+Vuk s Wall Streeta,The_Wolf_of_Wall_Street_(2013_film),Martin,Scorsese,Margot,Robbie,2013,Universal Pictures,179,Sjedinjene Američke Države,Komedija,392
+Nemilosrdni gadovi,Inglourious_Basterds,Quentin,Tarantino,Brad,Pitt,2009,The Weinstein Company,153,Sjedinjene Američke Države,Ratni,321
+Nemilosrdni gadovi,Inglourious_Basterds,Quentin,Tarantino,Christoph,Waltz,2009,The Weinstein Company,153,Sjedinjene Američke Države,Ratni,321
+Nemilosrdni gadovi,Inglourious_Basterds,Quentin,Tarantino,Michael,Fassbender,2009,The Weinstein Company,153,Sjedinjene Američke Države,Ratni,321
+Kum,The_Godfather,Francis Ford,Coppola,Marlon,Brando,1972,Paramount Pictures,177,Sjedinjene Američke Države,Krimi,260
+Kum,The_Godfather,Francis Ford,Coppola,Al,Pacino,1972,Paramount Pictures,177,Sjedinjene Američke Države,Krimi,260
+Sherlock Holmes,Sherlock_Holmes_(2009_film),Guy,Ritchie,Robert Jr.,Downey,2009,Warner Bros. Pictures,129,Ujedinjeno Kraljevstvo,Akcija,524
+Sherlock Holmes,Sherlock_Holmes_(2009_film),Guy,Ritchie,Jude,Law,2009,Warner Bros. Pictures,129,Ujedinjeno Kraljevstvo,Akcija,524
+Američki psiho,American_Psycho_(film),Mary,Harron,Christian,Bale,2000,Lions Gate Films,101,Kanada,Triler,34
+Američki psiho,American_Psycho_(film),Mary,Harron,Willem,Dafoe,2000,Lions Gate Films,101,Kanada,Triler,34
+Rambo,First_Blood,Ted,Kotcheff,Sylvester,Stallone,1982,Orion Pictures,93,Sjedinjene Američke Države,Akcija,125
+Rambo,First_Blood,Ted,Kotcheff,Richard,Crenna,1982,Orion Pictures,93,Sjedinjene Američke Države,Akcija,125
+Kad jaganjci utihnu,The_Silence_of_the_Lambs_(film),Jonathan,Demme,Jodie,Foster,1991,Orion Pictures,118,Sjedinjene Američke Države,Horor,273
+Kad jaganjci utihnu,The_Silence_of_the_Lambs_(film),Jonathan,Demme,Anthony,Hopkins,1991,Orion Pictures,118,Sjedinjene Američke Države,Horor,273
+Matrix,The_Matrix,Lana,Wachowski,Keanu,Reeves,1999,Warner Bros.,136,Sjedinjene Američke Države,Znanstvena-fantastika,465
+Matrix,The_Matrix,Lana,Wachowski,Laurence,Fishburne,1999,Warner Bros.,136,Sjedinjene Američke Države,Znanstvena-fantastika,465
+Interstellar,Interstellar_(film),Christoper,Nolan,Matthew,McConaughey,2014,Paramount Pictures,169,Sjedinjene Američke Države,Znanstvena-fantastika,696
+Interstellar,Interstellar_(film),Christoper,Nolan,Anne,Hathaway,2014,Paramount Pictures,169,Sjedinjene Američke Države,Znanstvena-fantastika,696

@@ -1,0 +1,206 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://or.fer.unizg.hr/filmovi.json",
+    "type": "array",
+    "title": "OR Filmovi",
+    "description": "Otvoreni skup filmova za labos iz OR",
+    "default": [],
+    "examples": [
+        [
+            {
+                "naziv_filma": "Genijalni um",
+                "wikipedia": "A_Beautiful_Mind_(film)",
+                "redatelj_ime": "Ron",
+                "redatelj_prezime": "Howard",
+                "glumac_ime": "Russell",
+                "glumac_prezime": "Crowe",
+                "godina": 2001,
+                "filmski_studio": "Universal Pictures",
+                "trajanje_min": 135,
+                "zemlja": "Sjedinjene Američke Države",
+                "zanr": "Drama",
+                "box_office_zarada (m$)": 313
+            },
+            {
+                "naziv_filma": "Genijalni um",
+                "wikipedia": "A_Beautiful_Mind_(film)",
+                "redatelj_ime": "Ron",
+                "redatelj_prezime": "Howard",
+                "glumac_ime": "Jennifer",
+                "glumac_prezime": "Connelly",
+                "godina": 2001,
+                "filmski_studio": "Universal Pictures",
+                "trajanje_min": 135,
+                "zemlja": "Sjedinjene Američke Države",
+                "zanr": "Drama",
+                "box_office_zarada (m$)": 313
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "Film",
+                "description": "Objekt koji sadrži sve podatke o filmu.",
+                "default": {},
+                "examples": [
+                    {
+                        "naziv_filma": "Genijalni um",
+                        "wikipedia": "A_Beautiful_Mind_(film)",
+                        "redatelj_ime": "Ron",
+                        "redatelj_prezime": "Howard",
+                        "glumac_ime": "Russell",
+                        "glumac_prezime": "Crowe",
+                        "godina": 2001,
+                        "filmski_studio": "Universal Pictures",
+                        "trajanje_min": 135,
+                        "zemlja": "Sjedinjene Američke Države",
+                        "zanr": "Drama",
+                        "box_office_zarada (m$)": 313
+                    }
+                ],
+                "required": [
+                    "naziv_filma",
+                    "wikipedia",
+                    "redatelj_ime",
+                    "redatelj_prezime",
+                    "glumac_ime",
+                    "glumac_prezime",
+                    "godina",
+                    "filmski_studio",
+                    "trajanje_min",
+                    "zemlja",
+                    "zanr",
+                    "box_office_zarada (m$)"
+                ],
+                "properties": {
+                    "naziv_filma": {
+                        "$id": "#/items/anyOf/0/properties/naziv_filma",
+                        "type": "string",
+                        "title": "Naziv filma",
+                        "description": "Naziv filma.",
+                        "default": "",
+                        "examples": [
+                            "Genijalni um"
+                        ]
+                    },
+                    "wikipedia": {
+                        "$id": "#/items/anyOf/0/properties/wikipedia",
+                        "type": "string",
+                        "title": "Wikipedia stranica",
+                        "description": "Ime stranice o filmu na wikipediji.",
+                        "default": "",
+                        "examples": [
+                            "A_Beautiful_Mind_(film)"
+                        ]
+                    },
+                    "redatelj_ime": {
+                        "$id": "#/items/anyOf/0/properties/redatelj_ime",
+                        "type": "string",
+                        "title": "Ime redatelja",
+                        "description": "Ime redatelja.",
+                        "default": "",
+                        "examples": [
+                            "Ron"
+                        ]
+                    },
+                    "redatelj_prezime": {
+                        "$id": "#/items/anyOf/0/properties/redatelj_prezime",
+                        "type": "string",
+                        "title": "Prezime redatelja",
+                        "description": "Prezime redatelja.",
+                        "default": "",
+                        "examples": [
+                            "Howard"
+                        ]
+                    },
+                    "glumac_ime": {
+                        "$id": "#/items/anyOf/0/properties/glumac_ime",
+                        "type": "string",
+                        "title": "Ime glumca",
+                        "description": "Ime glumca.",
+                        "default": "",
+                        "examples": [
+                            "Russell"
+                        ]
+                    },
+                    "glumac_prezime": {
+                        "$id": "#/items/anyOf/0/properties/glumac_prezime",
+                        "type": "string",
+                        "title": "Prezime glumca",
+                        "description": "Prezime glumca.",
+                        "default": "",
+                        "examples": [
+                            "Crowe"
+                        ]
+                    },
+                    "godina": {
+                        "$id": "#/items/anyOf/0/properties/godina",
+                        "type": "integer",
+                        "title": "Godina filma",
+                        "description": "Godina koje je film pušten u projekciju.",
+                        "default": 0,
+                        "examples": [
+                            2001
+                        ]
+                    },
+                    "filmski_studio": {
+                        "$id": "#/items/anyOf/0/properties/filmski_studio",
+                        "type": "string",
+                        "title": "Filmski studio",
+                        "description": "Ime filmskog studia.",
+                        "default": "",
+                        "examples": [
+                            "Universal Pictures"
+                        ]
+                    },
+                    "trajanje_min": {
+                        "$id": "#/items/anyOf/0/properties/trajanje_min",
+                        "type": "integer",
+                        "title": "Trajanje filma",
+                        "description": "Trajanje filma u minutama.",
+                        "default": 0,
+                        "examples": [
+                            135
+                        ]
+                    },
+                    "zemlja": {
+                        "$id": "#/items/anyOf/0/properties/zemlja",
+                        "type": "string",
+                        "title": "Zemlja",
+                        "description": "Zemlja u kojoj je film snimljen.",
+                        "default": "",
+                        "examples": [
+                            "Sjedinjene Američke Države"
+                        ]
+                    },
+                    "zanr": {
+                        "$id": "#/items/anyOf/0/properties/zanr",
+                        "type": "string",
+                        "title": "Žanr",
+                        "description": "Žanr filma.",
+                        "default": "",
+                        "examples": [
+                            "Drama"
+                        ]
+                    },
+                    "box_office_zarada (m$)": {
+                        "$id": "#/items/anyOf/0/properties/box_office_zarada%20%28m%24%29",
+                        "type": "integer",
+                        "title": "Box office zarada",
+                        "description": "Box office zarada filma u milijunima $.",
+                        "default": 0,
+                        "examples": [
+                            313
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

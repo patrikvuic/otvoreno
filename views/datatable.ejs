@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Popis filmova</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <meta>
+</head>
+<body>
+    <form action="/datatable" method="post" name="Polje za pretragu">
+        <label for="input">Unesite vrijednost za pretragu:</label>
+        <input type="text" id="input" name="input" value="<%= inputText %>"><br>
+        <label for="filter">Odaberite polje za pretragu:</label>
+            <select id="filter" name="filter" >
+                <option value="wildcard" <% if(selected ==='wildcard'){ %> selected <%}%>>Sva polja (wildcard)</option>
+                <option value="naziv_filma" <% if(selected ==='naziv_filma'){ %> selected <%}%>>Naziv filma</option>
+                <option value="redatelj_ime" <% if(selected ==='redatelj_ime'){ %> selected <%}%>>Ime redatelja</option>
+                <option value="redatelj_prezime" <% if(selected ==='redatelj_prezime'){ %> selected <%}%>>Prezime redatelja</option>
+                <option value="glumac_ime" <% if(selected ==='glumac_ime'){ %> selected <%}%>>Ime glumca</option>
+                <option value="glumac_prezime" <% if(selected ==='glumac_prezime'){ %> selected <%}%>>Prezime glumca</option>
+                <option value="filmski_studio" <% if(selected ==='filmski_studio'){ %> selected <%}%>>Naziv filmskog studia</option>
+                <option value="zemlja" <% if(selected ==='zemlja'){ %> selected <%}%>>Zemlja snimanja filma</option>
+                <option value="zanr" <% if(selected ==='zanr'){ %> selected <%}%>>Žanr</option>
+                <option value="godina" <% if(selected ==='godina'){ %> selected <%}%>>Godina filma</option>
+            </select>
+        <div>
+            <button class="myButton2" type="submit" formaction="/datatable">Pretraži</button>
+            <button class="myButton2" type="submit" formaction="/datatable/json">Export to JSON</button>
+            <button class="myButton2" type="submit" formaction="/datatable/csv">Export to CSV</button>
+        </div>
+    </form>
+
+    <table class="myTable">
+        <thead>
+        <tr>
+            <th>Naziv filma</th><th>Wikipedia</th><th>Redatelj</th><th>Glumci</th><th>Godina filma</th><th>Filmski studio</th><th>Trajanje filma(min)</th><th>Zemlja filma</th><th>Žanr</th><th>Box office zarada (m$)</th> 
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let film of filmovi) { %>
+            <tr>
+                <td><%= film.naziv_filma %></td>
+                <td><%= film.wikipedia %></td>
+                <td><%= film.redatelj_ime %> <%= film.redatelj_prezime %></td>
+                <td><% for (let glumac of glumci) { %>
+                        <%if(glumac.naziv_filma===film.naziv_filma){ %>
+                            <%= glumac.glumac_ime %> <%= glumac.glumac_prezime %>; 
+                        <% } %>
+                    <% } %>
+                </td>
+                <td><%= film.godina %></td>
+                <td><%= film.filmski_studio %></td>
+                <td><%= film.trajanje_min %></td>
+                <td><%= film.zemlja %></td>
+                <td><%= film.zanr %></td>
+                <td><%= film.box_office_zarada_m$ %></td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+</body>
