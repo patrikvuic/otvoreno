@@ -1,0 +1,816 @@
+{
+    "definitions": {},
+    "info": {
+      "title": "otvoreno",
+      "version": "1.0.0",
+      "license": {
+        "name": "ISC"
+      },
+      "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\n* Ovo je lista nekih filmova kojih sam odabrado za izradu labosa. Svi podaci su uzeti sa wikipedije. * Otvorena licenca : Creative Commons Attribution-ShareAlike License * Autor : Patrik Vuić * Verzija : 1.0 * Jezik podataka : Hrvatski * Opis atributa u skupu podataka:     * Naziv filma - max duljina 30     * Stranica na wikipediji - max duljina 100     * Ime redatelja - max duljina 30     * Prezime redatelja - max duljina 30     * Ime glumca - max duljina 30     * Prezime glumca - max duljina 30     * Godina filma - broj     * Filmski Studio - max duljina 40     * Trajanje (minute) - broj     * Zemlja porjekla - max duljina 50     * Žanr - max duljina 30     * Box office zarada (milijun $) - broj"
+    },
+    "paths": {
+      "/movies/{id}": {
+        "get": {
+          "summary": "/movies/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Fetched movie object"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "example": 3
+                      },
+                      "naziv_filma": {
+                        "type": "string",
+                        "example": "Nemilosrdni gadovi"
+                      },
+                      "wikipedia": {
+                        "type": "string",
+                        "example": "Inglourious_Basterds"
+                      },
+                      "redatelj_ime": {
+                        "type": "string",
+                        "example": "Quentin"
+                      },
+                      "redatelj_prezime": {
+                        "type": "string",
+                        "example": "Tarantino"
+                      },
+                      "filmski_studio": {
+                        "type": "string",
+                        "example": "The Weinstein Company"
+                      },
+                      "zemlja": {
+                        "type": "string",
+                        "example": "Sjedinjene Američke Države"
+                      },
+                      "zanr": {
+                        "type": "string",
+                        "example": "Ratni"
+                      },
+                      "trajanje_min": {
+                        "type": "number",
+                        "example": 153
+                      },
+                      "box_office_zarada_m$": {
+                        "type": "number",
+                        "example": 321
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "rel",
+                            "method",
+                            "href"
+                          ]
+                        },
+                        "example": [
+                          {
+                            "rel": "self",
+                            "method": "GET",
+                            "href": "https://en.wikipedia.org/wiki/Inglourious_Basterds"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "Not Found"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Movie with the provided ID doesn't exist"
+                  },
+                  "reponse": {
+                    "type": "null",
+                    "example": null
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        },
+        "delete": {
+          "summary": "/movies/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "DELETED movie object"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "example": "11"
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "self",
+                            "method": "POST",
+                            "href": "/"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "Not Found"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Movie with the provided ID doesn't exist"
+                  },
+                  "reponse": {
+                    "type": "null",
+                    "example": null
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        },
+        "put": {
+          "summary": "/movies/{id}",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Updated movie object"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "example": 11
+                      },
+                      "naziv_filma": {
+                        "type": "string",
+                        "example": "test3"
+                      },
+                      "wikipedia": {
+                        "type": "string",
+                        "example": "test3"
+                      },
+                      "redatelj_ime": {
+                        "type": "string",
+                        "example": "Ivan"
+                      },
+                      "redatelj_prezime": {
+                        "type": "string",
+                        "example": "Ivic"
+                      },
+                      "filmski_studio": {
+                        "type": "string",
+                        "example": "Warner Bros."
+                      },
+                      "zemlja": {
+                        "type": "string",
+                        "example": "Kanada"
+                      },
+                      "zanr": {
+                        "type": "string",
+                        "example": "Komedija"
+                      },
+                      "trajanje_min": {
+                        "type": "number",
+                        "example": 136
+                      },
+                      "box_office_zarada_m$": {
+                        "type": "number",
+                        "example": 17
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "self",
+                            "method": "GET",
+                            "href": 11
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        }
+      },
+      "/movies": {
+        "post": {
+          "summary": "/movies",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Created movie object"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "example": 11
+                      },
+                      "naziv_filma": {
+                        "type": "string",
+                        "example": "test3"
+                      },
+                      "wikipedia": {
+                        "type": "string",
+                        "example": "test3"
+                      },
+                      "redatelj_ime": {
+                        "type": "string",
+                        "example": "Ivan"
+                      },
+                      "redatelj_prezime": {
+                        "type": "string",
+                        "example": "Ivic"
+                      },
+                      "filmski_studio": {
+                        "type": "string",
+                        "example": "Warner Bros."
+                      },
+                      "zemlja": {
+                        "type": "string",
+                        "example": "Kanada"
+                      },
+                      "zanr": {
+                        "type": "string",
+                        "example": "Komedija"
+                      },
+                      "trajanje_min": {
+                        "type": "number",
+                        "example": 136
+                      },
+                      "box_office_zarada_m$": {
+                        "type": "number",
+                        "example": 17
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "self",
+                            "method": "GET",
+                            "href": 11
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        },
+        "get": {
+          "summary": "/movies",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Fetched movie objects"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "filmovi": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "naziv_filma": {
+                              "type": "string"
+                            },
+                            "wikipedia": {
+                              "type": "string"
+                            },
+                            "redatelj_ime": {
+                              "type": "string"
+                            },
+                            "redatelj_prezime": {
+                              "type": "string"
+                            },
+                            "filmski_studio": {
+                              "type": "string"
+                            },
+                            "zemlja": {
+                              "type": "string"
+                            },
+                            "zanr": {
+                              "type": "string"
+                            },
+                            "trajanje_min": {
+                              "type": "number"
+                            },
+                            "box_office_zarada_m$": {
+                              "type": "number"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "naziv_filma",
+                            "wikipedia",
+                            "redatelj_ime",
+                            "redatelj_prezime",
+                            "filmski_studio",
+                            "zemlja",
+                            "zanr",
+                            "trajanje_min",
+                            "box_office_zarada_m$"
+                          ]
+                        },
+                        "example": [
+                          {
+                            "id": 1,
+                            "naziv_filma": "Genijalni um",
+                            "wikipedia": "A_Beautiful_Mind_(film)",
+                            "redatelj_ime": "Ron",
+                            "redatelj_prezime": "Howard",
+                            "filmski_studio": "Universal Pictures",
+                            "zemlja": "Sjedinjene Američke Države",
+                            "zanr": "Drama",
+                            "trajanje_min": 135,
+                            "box_office_zarada_m$": 313
+                          }
+                        ]
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "self",
+                            "method": "POST",
+                            "href": "/"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        }
+      },
+      "/movies/{id}/actors": {
+        "get": {
+          "summary": "/movies/{id}/actors",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Fetched movie object"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "glumci": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "glumac_ime": {
+                              "type": "string"
+                            },
+                            "glumac_prezime": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "glumac_ime",
+                            "glumac_prezime"
+                          ]
+                        },
+                        "example": [
+                          {
+                            "glumac_ime": "Brad",
+                            "glumac_prezime": "Pitt"
+                          }
+                        ]
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "./",
+                            "method": "GET",
+                            "href": "./3"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        }
+      },
+      "/movies*": {},
+      "/studios": {
+        "get": {
+          "summary": "/studios",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Fetched studio objects"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "studios": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "filmski_studio": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "filmski_studio"
+                          ]
+                        },
+                        "example": [
+                          {
+                            "filmski_studio": "Warner Bros."
+                          }
+                        ]
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "./movies",
+                            "method": "GET",
+                            "href": "/"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        }
+      },
+      "/studios*": {},
+      "/directors": {
+        "get": {
+          "summary": "/directors",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "string",
+                    "example": "OK"
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Fetched director objects"
+                  },
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "directors": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "redatelj_ime": {
+                              "type": "string"
+                            },
+                            "redatelj_prezime": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "redatelj_ime",
+                            "redatelj_prezime"
+                          ]
+                        },
+                        "example": [
+                          {
+                            "redatelj_ime": "Ron",
+                            "redatelj_prezime": "Howard"
+                          }
+                        ]
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "rel": {
+                              "type": "string"
+                            },
+                            "method": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "example": [
+                          {
+                            "rel": "./movies",
+                            "method": "GET",
+                            "href": "/"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "application/json"
+          ]
+        }
+      },
+      "/directors*": {}
+    },
+    "swagger": "2.0",
+    "tags": []
+  }
