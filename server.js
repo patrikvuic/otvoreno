@@ -26,16 +26,22 @@ app.use(express.json());
 //app.use('/datatable',datatableRouter);
 app.use('/movies',movieRouter);
 app.use('/studios',studioRouter);
-app.use('/directors',directorRouter)
+app.use('/directors',directorRouter);
 
-// app.all('*', (req, res, next) => {
-//     res.setHeader('Content-type', 'application/json');
-//     let response = {
-//         status : "Not implemented",
-//         message : "Method not implemented for requested resource",
-//         response : null
-//     }
-//     res.status(501).json(response);
-// });
+app.get('/openapi', async function(req, res){
+    res.setHeader('Content-disposition', 'attachment; filename= openapi.json');
+    res.setHeader('Content-type', 'application/json');
+    res.download('./openapi.json');
+});
+
+app.all('*', (req, res, next) => {
+    res.setHeader('Content-type', 'application/json');
+    let response = {
+        status : "Not implemented",
+        message : "Method not implemented for requested resource",
+        response : null
+    }
+    res.status(501).json(response);
+});
 
 app.listen(3000);
