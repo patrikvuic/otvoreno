@@ -56,7 +56,7 @@ router.post('/',async function(req,res,next){
         message : "Created movie object",
         response : film
     };
-    res.status(200).json(response);
+    res.status(201).json(response);
 
 });
 router.delete('/:id', async function(req, res, next) {
