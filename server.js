@@ -4,6 +4,7 @@ var path = require('path');
 const bodyParser = require('body-parser');
 var hateoasLinker = require('express-hateoas-links');
 const expressOasGenerator = require('express-oas-generator');
+const cacheTime = 86400000 ;
 
 expressOasGenerator.init(app, {});
 
@@ -17,7 +18,9 @@ const directorRouter = require('./routes/director.routes');
 //app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine','ejs');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'),{
+    maxAge: cacheTime
+   }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(hateoasLinker);
 app.use(express.json());

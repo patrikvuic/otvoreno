@@ -645,6 +645,39 @@
           ]
         }
       },
+      "/movies/{id}/picture": {
+        "get": {
+          "summary": "/movies/{id}/picture",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  
+                  "image": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "tags": [],
+          "produces": [
+            "image/jpg"
+          ]
+        }
+      },
       "/movies*": {},
       "/studios": {
         "get": {

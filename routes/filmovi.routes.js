@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../db');
+const fetch = require('node-fetch');
+const fs = require('fs');
+var path = require('path');
+
 
 router.get('/:id', async function(req, res, next) {
     let id = req.params.id;
@@ -13,11 +17,17 @@ router.get('/:id', async function(req, res, next) {
         res.setHeader('Content-type', 'application/json');
         film.links = [{rel: "self", method: "GET", href:"https://en.wikipedia.org/wiki/"+film.wikipedia},
                         {rel: "actors", method: "GET", href:id+"/actors"}];
+        film.slika = "http://localhost:3000/movies/" + id + "/picture";
+        film["@context"] = {
+            "@vocab": "http://schema.org/",
+            "redatelj_ime": "givenName",
+            "redatelj_prezime": "familyName",
+            "naziv_filma": "name"
+        }
         let response ={
             status : "OK",
             message : "Fetched movie object",
             response : film
-        
         };
         res.status(200).json(response);
     }else{
@@ -163,6 +173,11 @@ router.get('/:id/actors', async function(req, res, next) {
             glumci: glumci,
             links : [{rel: "./", method: "GET", href: "./"+id}]
         }
+        responseGlumci["@context"] = {
+            "@vocab": "http://schema.org/Person",
+            "glumac_ime": "givenName",
+            "glumac_prezime": "familyName",
+        }
         let response ={
             status : "OK",
             message : "Fetched movie object",
@@ -195,6 +210,12 @@ router.get('/', async function(req, res, next) {
             filmovi : filmovi,
             links : [{rel: "self", method: "POST", href:"/"}]
         }
+        responseFilmovi["@context"] = {
+            "@vocab": "http://schema.org/",
+            "redatelj_ime": "givenName",
+            "redatelj_prezime": "familyName",
+            "naziv_filma": "name"
+        }
         let response ={
             status : "OK",
             message : "Fetched movie objects",
@@ -212,6 +233,46 @@ router.get('/', async function(req, res, next) {
         res.status(404).json(response);
     }
 });
+
+router.get('/:id/picture', async function(req, res, next) {
+    let id = req.params.id;
+    console.log(id);
+    const sqlData = await db.query(`SELECT DISTINCT wikipedia FROM filmovi WHERE id = ${id}`,[]);
+    const film = sqlData.rows[0];
+    console.log(film);
+    
+    if(film){
+        if (fs.existsSync(`./public/${film.wikipedia}.jpg`)){
+            console.log("file exists")
+        }else{
+            let url = "https://en.wikipedia.org/api/rest_v1/page/summary/"+film.wikipedia;
+            let settings = { method: "Get" };
+            let data = await fetch(url, settings);
+            let pictureUrl = await data.json();
+            pictureUrl = pictureUrl.originalimage.source;
+            console.log(pictureUrl);
+            const response = await fetch(pictureUrl);
+            const buffer = await response.buffer();
+            fs.writeFile(`./public/${film.wikipedia}.jpg`, buffer, () => 
+            console.log('finished downloading!'));
+        }
+        fs.readFile(`./public/${film.wikipedia}.jpg`, function(err, data) {
+            if (err) throw err;
+            res.setHeader('Content-type', 'image/jpg');
+            res.setHeader('Content-Disposition', 'inline')
+            res.status(200).end(data);
+        })
+    }else{
+        res.setHeader('Content-type', 'application/json');
+        let response = {
+            status : "Not Found",
+            message: "Movie with the provided ID doesn't exist",
+            reponse: null
+        }
+        res.status(404).json(response);
+    }
+});
+
 
 router.all('*', (req, res, next) => {
     res.setHeader('Content-type', 'application/json');
