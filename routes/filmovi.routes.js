@@ -256,12 +256,16 @@ router.get('/:id/picture', async function(req, res, next) {
             fs.writeFile(`./public/${film.wikipedia}.jpg`, buffer, () => 
             console.log('finished downloading!'));
         }
-        fs.readFile(`./public/${film.wikipedia}.jpg`, function(err, data) {
-            if (err) throw err;
-            res.setHeader('Content-type', 'image/jpg');
-            res.setHeader('Content-Disposition', 'inline')
-            res.status(200).end(data);
-        })
+        res.render('imageView', {
+            title: `${film.wikipedia}.jpg`,
+            src : `/${film.wikipedia}.jpg`
+        });
+        // fs.readFile(`./public/${film.wikipedia}.jpg`, function(err, data) {
+        //     if (err) throw err;
+        //     res.setHeader('Content-type', 'image/jpg');
+        //     res.setHeader('Content-Disposition', 'inline')
+        //     res.status(200).end(data);
+        // })
     }else{
         res.setHeader('Content-type', 'application/json');
         let response = {
